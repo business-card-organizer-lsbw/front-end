@@ -3,8 +3,31 @@ import { NavLink, Link } from "react-router-dom";
 import { BizCard } from "./BizCard";
 import AxiosWithAuth from "../Utils/AxiosWithAuth";
 import { LinearProgress } from "@material-ui/core";
+import Button from '@material-ui/core/Button';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import {orange} from '@material-ui/core/colors'
+
+const useStyles = makeStyles(theme => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+  input: {
+    display: 'none',
+  },
+}));
+
+const ColorButton = withStyles(theme => ({
+  root: {
+    color: theme.palette.getContrastText(orange[500]),
+    backgroundColor: orange[500],
+    '&:hover': {
+      backgroundColor: orange[700],
+    },
+  },
+}))(Button);
 
 const CardList = props => {
+  const classes = useStyles();
   const [isLoading, setIsLoading] = useState(true);
 
   const userId = localStorage.getItem("userId");
@@ -45,8 +68,10 @@ const CardList = props => {
               />
             ))
           ) : (
-            <Link to={`/addnewcard/${userId}`}>
-              <h1> Add Card </h1>
+            <Link to={`/addnewcard/${userId}`} className='btn'>
+              <ColorButton variant="contained" color="primary" className={classes.margin}>
+                Create Card
+              </ColorButton>
             </Link>
           )}
         </>

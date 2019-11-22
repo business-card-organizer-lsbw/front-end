@@ -126,11 +126,11 @@ const Form = props => {
               <Grid xs={12}>
                 <TextField
                   className={classes.TextFields}
-                  name="email"
-                  label="your@email.com"
+                  name="phone"
+                  label="Phone"
                   variant="outlined"
                   margin="normal"
-                  value={values.email}
+                  value={values.phone}
                   onChange={handleChange}
                 />
               </Grid>
