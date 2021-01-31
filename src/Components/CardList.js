@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BizCard } from "./BizCard";
 import AxiosWithAuth from "../Utils/AxiosWithAuth";
 import { LinearProgress, Button } from "@material-ui/core";

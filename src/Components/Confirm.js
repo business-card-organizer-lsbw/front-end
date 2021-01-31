@@ -100,7 +100,7 @@ const Confirm = props => {
             .catch(error => {
                 console.log(error)
             })
-    }, [])
+    }, )
     
     return(
         <div className='container'>

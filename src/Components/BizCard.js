@@ -7,7 +7,7 @@ import {
   Fab,
   CardActions,
   Collapse,
-  CardMedia,
+  
   CardContent,
   Grid
 } from "@material-ui/core";
