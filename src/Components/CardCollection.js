@@ -45,6 +45,7 @@ const CardList = props => {
       })
       .catch(error => {
         console.log(error);
+        console.info("info log")
       });
   }, []);
   return (
